@@ -1,18 +1,31 @@
 .content {
+  text-align: center;
+}
+
+.guesses {
   display: flex;
   justify-content: center;
 }
 
 div.letter {
   display: inline-flex;
-  border: 1px black solid;
-  border-radius: 5px;
   margin: 2px 2px;
   padding: 5px 10px;
   min-width: 20px;
   min-height: 40px;
   justify-content: center;
   align-items: center;
+}
+
+div.letter, input {
+  border: 1px black solid;
+  border-radius: 5px;
+}
+
+input {
+  height: 30px;
+  width: 200px;
+  font-size: 24px;
 }
 
 div {
