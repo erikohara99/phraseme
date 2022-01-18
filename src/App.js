@@ -5,7 +5,7 @@ import React from 'react';
 
 class App extends React.Component {
   state = {
-    letters: [[0,0,3,0,0],["c","a",0,"b",0],["a","c","b","f","b"],[0,0,0,0,0],[0,8,0,0,0],["a","c","b","d","b"]],
+    letters: [["-","-","-","-","-"],["-","-","-","-","-"],["-","-","-","-","-"],["-","-","-","-","-"],["-","-","-","-","-"], ["-","-","-","-","-"]],
     word: "acbdb",
     count: 0
   }
@@ -16,11 +16,20 @@ class App extends React.Component {
     var letters = this.state.letters;
     const word = this.state.word;
     const count = this.state.count;
+
+    if(input.length !== word.length) return;
+
     for(let i = 0; i < word.length; i++) {
       letters[count][i] = input[i];
     }
+
+    console.log(letters[count]);
+
     this.setState({letters});
     this.setState({count: count+1});
+    document.getElementById("input").value = "";
+    if(count === letters.length - 1) document.getElementById("input").disabled = true;
+
     return;
   }
 
@@ -30,7 +39,7 @@ class App extends React.Component {
       <div className="guesses">
         <Guesses letters={this.state.letters} word={this.state.word} count={this.state.count} />
       </div>
-      <Input onSubmit={this.handleSubmit} />
+      <Input onSubmit={this.handleSubmit} word={this.state.word}/>
     </div>
     );
   }
