@@ -1,8 +1,10 @@
 import React from 'react';
 
-const Input = () => {
+const Input = (props) => {
     return ( 
-        <input placeholder="Enter guess..."></input>
+        <form onSubmit={props.onSubmit}>
+            <input id="input" placeholder="Enter guess..."></input>
+        </form>
      );
 }
  
