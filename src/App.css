@@ -1,3 +1,8 @@
+body {
+  background-color: rgb(14, 14, 14);
+  color: white;
+}
+
 .content {
   text-align: center;
 }
@@ -15,10 +20,12 @@ div.letter {
   min-height: 40px;
   justify-content: center;
   align-items: center;
+  background-color: rgb(58, 58, 58);
+  font-size: 24px;
 }
 
 div.letter, input {
-  border: 1px black solid;
+  border: 2px black solid;
   border-radius: 5px;
 }
 
@@ -37,5 +44,5 @@ div {
 }
 
 .position {
-  background-color: yellow !important;
+  background-color: rgb(168, 168, 0) !important;
 }
