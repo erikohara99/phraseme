@@ -12,7 +12,7 @@ class App extends React.Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    const input = document.getElementById("input").value;
+    const input = document.getElementById("input").value.toUpperCase();
     var letters = this.state.letters;
     const word = this.state.word;
     const count = this.state.count;
@@ -27,9 +27,12 @@ class App extends React.Component {
 
     this.setState({letters});
     this.setState({count: count+1});
-    document.getElementById("input").value = "";
-    if(count === letters.length - 1) document.getElementById("input").disabled = true;
 
+    if(count === letters.length - 1){
+      document.getElementById("input").disabled = true;
+      return;
+    }
+    document.getElementById("input").value = "";
     return;
   }
 

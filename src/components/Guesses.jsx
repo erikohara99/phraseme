@@ -13,8 +13,8 @@ class Guesses extends React.Component {
 
             {this.state.letters.map(guess => {
                 return <div>{guess.map((letter, index) => {
-                    if(letter == this.state.word[index]) return <div className="letter correct">{letter}</div>
-                    if(this.state.word.includes(letter)) return <div className="letter position">{letter}</div>
+                    if(letter.toUpperCase() == this.state.word[index].toUpperCase()) return <div className="letter correct">{letter}</div>
+                    if(this.state.word.toUpperCase().includes(letter.toUpperCase())) return <div className="letter position">{letter}</div>
                     return <div className="letter">{letter}</div>
                 })}</div>
             })}
