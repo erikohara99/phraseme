@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/phraseme/static/css/main.3be52498.css",
+    "main.js": "/phraseme/static/js/main.eb9876ca.js",
+    "static/js/787.4afc8379.chunk.js": "/phraseme/static/js/787.4afc8379.chunk.js",
+    "index.html": "/phraseme/index.html",
+    "main.3be52498.css.map": "/phraseme/static/css/main.3be52498.css.map",
+    "main.eb9876ca.js.map": "/phraseme/static/js/main.eb9876ca.js.map",
+    "787.4afc8379.chunk.js.map": "/phraseme/static/js/787.4afc8379.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.3be52498.css",
+    "static/js/main.eb9876ca.js"
+  ]
+}
