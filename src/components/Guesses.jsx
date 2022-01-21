@@ -2,8 +2,7 @@ import React from 'react';
 
 class Guesses extends React.Component {
     state = {
-        letters: this.props.letters,
-        word: this.props.word
+        letters: this.props.letters
     }
 
     render() { 
@@ -15,8 +14,8 @@ class Guesses extends React.Component {
             {this.state.letters.map(guess => {
                 return <div>{guess.map((letter, index) => {
                     letter = letter.toUpperCase();
-                    if(letter == this.state.word[index]) return <div className="letter correct">{letter}</div>
-                    if(this.state.word.includes(letter)) return <div className="letter position">{letter}</div>
+                    if(letter == this.props.word[index]) return <div className="letter correct">{letter}</div>
+                    if(this.props.word.includes(letter)) return <div className="letter position">{letter}</div>
                     return <div className="letter">{letter}</div>
                 })}</div>
             })}
