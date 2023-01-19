@@ -13,7 +13,7 @@ class App extends React.Component {
   }
 
   componentDidMount(){
-    this.setState({word: this.state.list[Math.floor(Math.random()*this.state.list.length)].toUpperCase()});
+    this.setState({word: this.state.list[Math.floor(Math.random() * this.state.list.length)].toUpperCase()});
     var obtained = this.state.obtained;
     for(var i = 0; i < 5; i++) obtained.push("_");
     this.setState({obtained});
